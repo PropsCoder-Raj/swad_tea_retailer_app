@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order #{{orderId.substring(0, 10)}}</ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-card class="header-card"></ion-card>
+</ion-header>
+
+<ion-content>
+
+  <div id="closeForm" (click)="loader = !loader"></div>
+
+  <ion-list style="border-bottom: 1px solid #ccc;">
+    <ion-item lines="none" *ngFor="let item of items">
+      <ion-label>
+        <h3>{{item.productName}} x {{item.quantity}}</h3>
+
+      </ion-label>
+      <ion-label slot="end">₹ {{item.amount}}</ion-label>
+
+    </ion-item>
+  </ion-list>
+  <ion-item lines="none">
+    <ion-label>
+      <h3>Sub Total</h3>
+
+    </ion-label>
+    <ion-label slot="end">₹ {{subtotal}}</ion-label>
+
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>
+      <h3>Commission 5% (-)</h3>
+
+    </ion-label>
+    <ion-label slot="end">₹ {{commission}}</ion-label>
+
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>
+      <h3>CGST 2.5% (+)</h3>
+
+    </ion-label>
+    <ion-label slot="end">₹ {{cgst}}</ion-label>
+
+  </ion-item>
+  <ion-item lines="none" style="border-bottom: 1px solid #ccc;">
+    <ion-label>
+      <h3>SGST 2.5% (+)</h3>
+
+    </ion-label>
+    <ion-label slot="end">₹ {{sgst}}</ion-label>
+
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>
+      <h3>Total</h3>
+
+    </ion-label>
+    <ion-label slot="end">
+      <h3 style="font-weight: 700; font-size: 18px;">₹ {{total}}</h3>
+    </ion-label>
+
+  </ion-item>
+
+  <ion-item lines="none" *ngIf="paymentStatus == 'pending'">
+    <ion-label style="text-align: center;">
+      <ion-button (click)="payment()" color="primary" [disabled]="loader">
+        <span *ngIf="!loader">Make Payment</span>
+        <ion-spinner name="dots" *ngIf="loader"></ion-spinner>
+      </ion-button>
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="none" *ngIf="status == 'pending' && paymentStatus == 'success'">
+    <ion-label style="text-align: center;">
+      Wait for confirm order.
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="none" *ngIf="status == 'success' && paymentStatus == 'success'">
+    <ion-label style="text-align: center;">
+      Confirmed order.
+    </ion-label>
+  </ion-item>
+</ion-content>

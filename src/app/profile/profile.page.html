@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-border"  color="primary">
+    <!-- <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons> -->
+    <ion-title slot="start">Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="authS.logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="header-card"></ion-card>
+
+    <ion-item lines="none" style="padding-top: 10px; padding-bottom: 10px;">
+      <ion-avatar  slot="start" style="width: 50px; height: 50px;">
+      <img src="assets/programmer.png" />
+    </ion-avatar>
+      <ion-label>
+        <h2>{{name}}</h2>
+        <h3>{{email}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">User ID :</ion-label>
+      <ion-label>{{userId}}</ion-label>
+     </ion-item>
+    <ion-item lines="none">
+     <ion-label slot="start" style="opacity: 50%;">Mobile :</ion-label>
+     <ion-label>{{mobileNo}}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">Gender :</ion-label>
+      <ion-label>{{gender}}</ion-label>
+     </ion-item>
+     <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">BirthDate :</ion-label>
+      <ion-label>{{birthDate}}</ion-label>
+     </ion-item>
+    <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">Aadhar Card :</ion-label>
+      <ion-label>{{aadharCard}}</ion-label>
+     </ion-item>
+     <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">Address :</ion-label>
+      <ion-label><p [innerHTML]="address"></p></ion-label>
+     </ion-item>
+   
+     <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">City :</ion-label>
+      <ion-label>{{city}}</ion-label>
+     </ion-item>
+     <ion-item lines="none">
+       <ion-label slot="start" style="opacity: 50%;">State :</ion-label>
+       <ion-label>{{state}}</ion-label>
+      </ion-item>
+     <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">Target In Kg :</ion-label>
+      <ion-label>{{targetInKg}} KG</ion-label>
+     </ion-item>
+     <ion-item lines="none">
+      <ion-label slot="start" style="opacity: 50%;">Incentive :</ion-label>
+      <ion-label>{{incentive}}</ion-label>
+     </ion-item>
+</ion-content>

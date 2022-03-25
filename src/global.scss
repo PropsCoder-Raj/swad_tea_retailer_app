@@ -1,0 +1,133 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    src: url('assets/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: light;
+    src: url('assets/fonts/poppins/Poppins-Light.ttf');
+}
+
+
+
+ion-input,ion-textarea{
+    border: 1px solid #9969FD;
+    border-radius: 5px;
+}
+
+ion-item > ion-label {
+    padding-left: 10px;
+}
+
+ion-col{
+    padding: unset;
+}
+
+.custom-file-input input {
+    color: transparent !important;
+    height: 40px !important;
+    padding: unset !important;
+  }
+  .custom-file-input input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input input::before {
+    content: "Select file";
+    color: black;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 0px;
+    outline: none;
+    white-space: nowrap;
+    width: 98%;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-size: 13pt;
+  }
+  .custom-file-input input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input input:active {
+    outline: 0;
+  }
+  .custom-file-input input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+  }
+
+  .item-label-stacked .sc-ion-input-ios-h{
+    --padding-start: 8px;
+  }
+
+  ion-card{
+    box-shadow: rgb(0 0 0 /7%) 0px 4px 16px;
+  }
+.tab-selected{
+    --background:#DAD4EC !important;
+    border-radius: 20px;
+    padding: unset;
+}
+
+ion-tab-bar{
+  --background:white; 
+  --border:unset;
+  border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  box-shadow: rgb(0 0 0 /11%) 0px 4px 16px;
+}
+
+ion-tab-button{
+  max-width: 33.33%;
+  ion-icon{
+    font-size: 25px;
+  }
+}
+
+ion-content{
+  --background:#FDFEFF;
+}
+ion-item{
+  --background:transparent;
+}
+
+.header-md:after{
+  background: none !important;
+}

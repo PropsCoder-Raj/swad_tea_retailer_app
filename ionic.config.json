@@ -1,0 +1,7 @@
+{
+  "name": "swad-emp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

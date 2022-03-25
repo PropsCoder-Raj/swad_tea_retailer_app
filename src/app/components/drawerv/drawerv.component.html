@@ -1,0 +1,48 @@
+<div class="drawer" #drawer style="visibility: hidden;">
+  <div class="ion-text-center">
+    <ion-button expand="full" fill="clear" (click)="toggleDrawer()">
+      <div class="drawer-pull"></div>
+    </ion-button>
+  </div>
+
+  <ng-container id="mainContent">
+    <ion-content style="--padding-start: 10px;--padding-end: 10px;">
+      <ion-item lines="none" style="padding-bottom: 10px;">
+        <ion-label>Month</ion-label>
+      <ion-select placeholder="Select" [(ngModel)]="month">
+              <ion-select-option value="1">January</ion-select-option>
+              <ion-select-option value="2">February</ion-select-option>
+              <ion-select-option value="3">March</ion-select-option>
+              <ion-select-option value="4">April</ion-select-option>
+              <ion-select-option value="5">May</ion-select-option>
+              <ion-select-option value="6">June</ion-select-option>
+              <ion-select-option value="7">July</ion-select-option>
+              <ion-select-option value="8">August</ion-select-option>
+              <ion-select-option value="9">September</ion-select-option>
+              <ion-select-option value="10">October</ion-select-option>
+              <ion-select-option value="11">November</ion-select-option>
+              <ion-select-option value="12">December</ion-select-option>
+      </ion-select>
+      </ion-item>
+
+      <ion-item lines="none" style="padding-bottom: 10px;">
+        <ion-label>Year</ion-label>
+      <ion-select placeholder="Select" [(ngModel)]="year">
+              <ion-select-option value="2020">2020</ion-select-option>
+              <ion-select-option value="2021">2021</ion-select-option>
+              <ion-select-option value="2022">2022</ion-select-option>
+              <ion-select-option value="2023">2023</ion-select-option>
+              <ion-select-option value="2024">2024</ion-select-option>
+              <ion-select-option value="2025">2025</ion-select-option>
+              <ion-select-option value="2026">2026</ion-select-option>
+              <ion-select-option value="2027">2027</ion-select-option>
+              <ion-select-option value="2028">2028</ion-select-option>
+              <ion-select-option value="2029">2029</ion-select-option>
+              <ion-select-option value="2030">2030</ion-select-option>
+      </ion-select>
+      </ion-item>
+      <ion-button expand="block" fill="outline" (click)="applyfilter()">Apply</ion-button>
+    </ion-content>
+  </ng-container>
+  
+</div>
